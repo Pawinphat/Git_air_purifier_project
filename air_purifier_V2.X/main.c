@@ -82,6 +82,7 @@ int main(void)
     
     OP_BUZZER_SetLow();
     TMR2_Stop();
+    Nop();
     while (1)
     {
       /*  OP_BUZZER_Toggle();
