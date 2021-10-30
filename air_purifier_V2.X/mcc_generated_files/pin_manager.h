@@ -200,6 +200,7 @@
 
 */
 #define ADC_BH1680FVC_LIGHT_SENSOR_SetDigitalOutput() (_TRISA0 = 0)
+
 /**
   @Summary
     Sets the GPIO pin, RA11, high using LATA11.
@@ -346,6 +347,7 @@
 
 */
 #define OP_595_LED_OEN_SetDigitalOutput() (_TRISA11 = 0)
+
 /**
   @Summary
     Sets the GPIO pin, RA12, high using LATA12.
@@ -444,6 +446,7 @@
 
 */
 #define OP_595_LED_DATA_GetValue()         _RA12
+#define OP_595_LED_DATA                    _RA12    // Define Pin name @Home
 /**
   @Summary
     Configures the GPIO pin, RA12, as an input.

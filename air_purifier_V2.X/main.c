@@ -68,6 +68,7 @@
 #include "mcc_generated_files/system.h"
 #include "mcc_generated_files/pin_manager.h"
 #include "mcc_generated_files/tmr2.h"
+#include "main.h"
 
 void Delaytime (uint16_t del);
 
@@ -80,11 +81,14 @@ int main(void)
     // initialize the device
     SYSTEM_Initialize();
     
+    __delay_ms(1000);
     OP_BUZZER_SetLow();
     TMR2_Stop();
-    Nop();
+    
     while (1)
     {
+        OP_BUZZER_Toggle();
+        __delay_us(100);
       /*  OP_BUZZER_Toggle();
         for(u8Loop = 0; u8Loop < 100; u8Loop++){
             Delaytime(3);
@@ -105,6 +109,8 @@ void Delaytime (uint16_t del)
 {
     for(del=del; del>0; del--);
 }
+
+
 /**
  End of File
 */
