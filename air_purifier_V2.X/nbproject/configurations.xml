@@ -28,6 +28,7 @@
       </logicalFolder>
       <itemPath>74595.h</itemPath>
       <itemPath>main.h</itemPath>
+      <itemPath>led_controller.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -56,6 +57,7 @@
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>74595.c</itemPath>
+      <itemPath>led_controller.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

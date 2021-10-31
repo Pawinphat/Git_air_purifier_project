@@ -1,5 +1,12 @@
 #include "mcc_generated_files/pin_manager.h"
-#define DEF74595_NUMBER_PORT 8
+
+#define DELAY_SHORT_TIMING_uS 1
+#define DELAY_LONG_TIMING_uS 5
+
+#define HC595_LSB_FIRST 0
+#define HC595_MSB_FIRST 1
+
+#define DEF74595_NUMBER_PORT 1
 
 #define Latch_Off 0
 #define Latch_On 1
@@ -13,11 +20,6 @@
     #define PIN_HC74595_DATA_LAT_PORT_8     LATAbits.LATA11
     #define PIN_HC74595_OEN_TRIS_PORT_8    TRISAbits.TRISA11
     #define PIN_HC74595_OEN_LAT_PORT_8     LATAbits.LATA11
-
-    //@HOME Developer 74HC595 (OCt 30,2021)
-
-    #define HC595_LSB_FIRST_PORT_8 0
-    #define HC595_MSB_FIRST_PORT_8 1
 
     /**
     * Initialize HC595 module
@@ -63,11 +65,6 @@
     #define PIN_HC74595_OEN_TRIS_PORT_7    TRISDbits.TRISD3
     #define PIN_HC74595_OEN_LAT_PORT_7   LATDbits.LATD3
 
-    //@HOME Developer 74HC595 (OCt 30,2021)
-
-    #define HC595_LSB_FIRST_PORT_7 0
-    #define HC595_MSB_FIRST_PORT_7 1
-
     /**
     * Initialize HC595 module
     **/
@@ -111,11 +108,6 @@
     #define PIN_HC74595_DATA_LAT_PORT_6    LATAbits.LATA6
     #define PIN_HC74595_OEN_TRIS_PORT_6    TRISDbits.TRISD3
     #define PIN_HC74595_OEN_LAT_PORT_6   LATDbits.LATD3
-
-     //@HOME Developer 74HC595 (OCt 30,2021)
-
-    #define HC595_LSB_FIRST_PORT_6 0
-    #define HC595_MSB_FIRST_PORT_6 1
 
     /**
     * Initialize HC595 module
@@ -161,11 +153,6 @@
     #define PIN_HC74595_OEN_TRIS_PORT_5    TRISDbits.TRISD3
     #define PIN_HC74595_OEN_LAT_PORT_5   LATDbits.LATD3
 
-     //@HOME Developer 74HC595 (OCt 30,2021)
-
-    #define HC595_LSB_FIRST_PORT_5 0
-    #define HC595_MSB_FIRST_PORT_5 1
-
     /**
     * Initialize HC595 module
     **/
@@ -209,11 +196,6 @@
     #define PIN_HC74595_DATA_LAT_PORT_4    LATAbits.LATA6
     #define PIN_HC74595_OEN_TRIS_PORT_4    TRISDbits.TRISD3
     #define PIN_HC74595_OEN_LAT_PORT_4   LATDbits.LATD3
-
- //@HOME Developer 74HC595 (OCt 30,2021)
-
-    #define HC595_LSB_FIRST_PORT_4 0
-    #define HC595_MSB_FIRST_PORT_4 1
 
     /**
     * Initialize HC595 module
@@ -259,11 +241,6 @@
     #define PIN_HC74595_OEN_TRIS_PORT_3    TRISDbits.TRISD3
     #define PIN_HC74595_OEN_LAT_PORT_3   LATDbits.LATD3
 
- //@HOME Developer 74HC595 (OCt 30,2021)
-
-    #define HC595_LSB_FIRST_PORT_3 0
-    #define HC595_MSB_FIRST_PORT_3 1
-
     /**
     * Initialize HC595 module
     **/
@@ -308,11 +285,6 @@
     #define PIN_HC74595_OEN_TRIS_PORT_2    TRISDbits.TRISD3
     #define PIN_HC74595_OEN_LAT_PORT_2   LATDbits.LATD3
 
-  //@HOME Developer 74HC595 (OCt 30,2021)
-
-    #define HC595_LSB_FIRST_PORT_2 0
-    #define HC595_MSB_FIRST_PORT_2 1
-
     /**
     * Initialize HC595 module
     **/
@@ -348,19 +320,18 @@
 #endif
 
 #if DEF74595_NUMBER_PORT >= 1
-    #define PIN_HC74595_CLK_TRIS_PORT_1     TRISAbits.TRISA11
-    #define PIN_HC74595_CLK_LAT_PORT_1      LATAbits.LATA12
-    #define PIN_HC74595_LATCH_TRIS_PORT_1   TRISAbits.TRISA11
-    #define PIN_HC74595_LATCH_LAT_PORT_1    LATAbits.LATA12
-    #define PIN_HC74595_DATA_TRIS_PORT_1    TRISAbits.TRISA11
-    #define PIN_HC74595_DATA_LAT_PORT_1     LATAbits.LATA12
-    #define PIN_HC74595_OEN_TRIS_PORT_1     TRISAbits.TRISA11
-    #define PIN_HC74595_OEN_LAT_PORT_1      LATAbits.LATA12
-
+    
  //@HOME Developer 74HC595 (OCt 30,2021)
-
     #define HC595_LSB_FIRST_PORT_1 0
     #define HC595_MSB_FIRST_PORT_1 1
+    #define PIN_HC74595_CLK_TRIS_PORT_1     TRISAbits.TRISA9
+    #define PIN_HC74595_CLK_LAT_PORT_1      LATAbits.LATA9
+    #define PIN_HC74595_LATCH_TRIS_PORT_1   TRISCbits.TRISC13
+    #define PIN_HC74595_LATCH_LAT_PORT_1    LATCbits.LATC13
+    #define PIN_HC74595_DATA_TRIS_PORT_1    TRISAbits.TRISA12
+    #define PIN_HC74595_DATA_LAT_PORT_1     LATAbits.LATA12
+    #define PIN_HC74595_OEN_TRIS_PORT_1     TRISAbits.TRISA11
+    #define PIN_HC74595_OEN_LAT_PORT_1      LATAbits.LATA11
 
     /**
     * Initialize HC595 module

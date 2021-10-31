@@ -69,6 +69,7 @@
 #include "mcc_generated_files/pin_manager.h"
 #include "mcc_generated_files/tmr2.h"
 #include "main.h"
+#include "74595.h"
 
 void Delaytime (uint16_t del);
 
@@ -81,14 +82,26 @@ int main(void)
     // initialize the device
     SYSTEM_Initialize();
     
-    __delay_ms(1000);
-    OP_BUZZER_SetLow();
+  //  OP_BUZZER_SetLow();
     TMR2_Stop();
+    
+    
+    HC595Init_PORT_1();
+    OP_LED_PWM_SetHigh();
+
+    HC595SendValue_many_IC_PORT_1(0x00,HC595_LSB_FIRST,0);
+    HC595SendValue_many_IC_PORT_1(0x00,HC595_LSB_FIRST,1);
     
     while (1)
     {
-        OP_BUZZER_Toggle();
-        __delay_us(100);
+        HC595SendValue_many_IC_PORT_1(0xF,HC595_LSB_FIRST,0);
+        HC595SendValue_many_IC_PORT_1(0x4,HC595_LSB_FIRST,1);
+        __delay_ms(2000);  
+        HC595SendValue_many_IC_PORT_1(0x4,HC595_LSB_FIRST,0);
+        HC595SendValue_many_IC_PORT_1(0xF,HC595_LSB_FIRST,1);
+        __delay_ms(2000); 
+      //  OP_BUZZER_Toggle();
+      //  __delay_us(100);
       /*  OP_BUZZER_Toggle();
         for(u8Loop = 0; u8Loop < 100; u8Loop++){
             Delaytime(3);
