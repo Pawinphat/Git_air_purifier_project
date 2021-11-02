@@ -70,6 +70,9 @@
 #include "mcc_generated_files/tmr2.h"
 #include "main.h"
 #include "74595.h"
+#include "Display_control.h"
+
+type_status_system t_using_status_system;
 
 void Delaytime (uint16_t del);
 
@@ -79,27 +82,61 @@ void Delaytime (uint16_t del);
 int main(void)
 {
     uint8_t u8Loop;
+    uint16_t sum;
     // initialize the device
     SYSTEM_Initialize();
+    initial_program_config();
     
   //  OP_BUZZER_SetLow();
-    TMR2_Stop();
-    
-    
+    TMR2_Stop();   
     HC595Init_PORT_1();
     OP_LED_PWM_SetHigh();
-
-    HC595SendValue_many_IC_PORT_1(0x00,HC595_LSB_FIRST,0);
-    HC595SendValue_many_IC_PORT_1(0x00,HC595_LSB_FIRST,1);
     
+
+    t_using_status_system.bool_new_refresh_display = true;
+   
     while (1)
     {
-        HC595SendValue_many_IC_PORT_1(0xF,HC595_LSB_FIRST,0);
-        HC595SendValue_many_IC_PORT_1(0x4,HC595_LSB_FIRST,1);
-        __delay_ms(2000);  
-        HC595SendValue_many_IC_PORT_1(0x4,HC595_LSB_FIRST,0);
-        HC595SendValue_many_IC_PORT_1(0xF,HC595_LSB_FIRST,1);
-        __delay_ms(2000); 
+        
+       Refresh_Display();
+
+       t_UsingStructLED_FAN.u8Ledfan_auto_spa = 1;
+       t_UsingStructLED_FAN.u8Ledfan_low_spl  = 0;      
+       t_UsingStructLED_FAN.u8Ledfan_medium_spm = 0;
+       t_UsingStructLED_FAN.u8Ledfan_high_sph = 0;
+       
+       t_using_status_system.bool_new_refresh_display = true;
+           Refresh_Display();
+       __delay_ms(1200);
+       
+       t_UsingStructLED_FAN.u8Ledfan_auto_spa = 0;
+       t_UsingStructLED_FAN.u8Ledfan_low_spl  = 1;      
+       t_UsingStructLED_FAN.u8Ledfan_medium_spm = 0;
+       t_UsingStructLED_FAN.u8Ledfan_high_sph = 0;
+       
+       t_using_status_system.bool_new_refresh_display = true;
+           Refresh_Display();
+       __delay_ms(1200);
+       
+       t_UsingStructLED_FAN.u8Ledfan_auto_spa = 0;
+       t_UsingStructLED_FAN.u8Ledfan_low_spl  = 0;      
+       t_UsingStructLED_FAN.u8Ledfan_medium_spm = 1;
+       t_UsingStructLED_FAN.u8Ledfan_high_sph = 0;
+       
+       t_using_status_system.bool_new_refresh_display = true;
+           Refresh_Display();
+       __delay_ms(1200);
+       
+       t_UsingStructLED_FAN.u8Ledfan_auto_spa = 0;
+       t_UsingStructLED_FAN.u8Ledfan_low_spl  = 0;      
+       t_UsingStructLED_FAN.u8Ledfan_medium_spm = 0;
+       t_UsingStructLED_FAN.u8Ledfan_high_sph = 1;
+       
+       t_using_status_system.bool_new_refresh_display = true;
+           Refresh_Display();
+       __delay_ms(1200);
+       
+       
       //  OP_BUZZER_Toggle();
       //  __delay_us(100);
       /*  OP_BUZZER_Toggle();
@@ -121,6 +158,31 @@ int main(void)
 void Delaytime (uint16_t del)
 {
     for(del=del; del>0; del--);
+}
+
+void initial_program_config (void)
+{
+    ClearStatus_led();
+}
+
+void ClearStatus_led (void)
+{
+    t_UsingStructLED.u8Led_on = 0; 
+    t_UsingStructLED.u8Led_off = 0;
+    t_UsingStructLED.u8Led_1hr = 0;
+    t_UsingStructLED.u8Led_2hr = 0;
+    t_UsingStructLED.u8Led_4hr = 0; 
+    t_UsingStructLED.u8Led_8hr = 0;
+    t_UsingStructLED.u8Led_dimmer = 0;
+    t_UsingStructLED.u8Led_uv = 0; 
+        
+    t_UsingStructLED_FAN.u8Ledfan_auto_spa = 0;
+    t_UsingStructLED_FAN.u8Ledfan_low_spl = 0;
+    t_UsingStructLED_FAN.u8Ledfan_medium_spm = 0;
+    t_UsingStructLED_FAN.u8Ledfan_high_sph = 0;
+    t_UsingStructLED_FAN.u8Ledfan_lock = 0;
+    t_UsingStructLED_FAN.u8Ledfan_reset_filter = 0;
+    t_UsingStructLED_FAN.u8Ledfan_ion = 0; 
 }
 
 

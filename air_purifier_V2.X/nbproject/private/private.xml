@@ -3,15 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/10152021_MDY_PCB1_1/air_purifier_V2.X/main.c</file>
-            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/10152021_MDY_PCB1_1/air_purifier_V2.X/mcc_generated_files/system.c</file>
-            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/10152021_MDY_PCB1_1/air_purifier_V2.X/mcc_generated_files/pin_manager.c</file>
-            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/10152021_MDY_PCB1_1/air_purifier_V2.X/mcc_generated_files/clock.c</file>
-            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/10152021_MDY_PCB1_1/air_purifier_V2.X/mcc_generated_files/pin_manager.h</file>
-            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/10152021_MDY_PCB1_1/air_purifier_V2.X/mcc_generated_files/tmr2.h</file>
-            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/10152021_MDY_PCB1_1/air_purifier_V2.X/mcc_generated_files/tmr2.c</file>
-            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/10152021_MDY_PCB1_1/air_purifier_V2.X/mcc_generated_files/mcc.c</file>
-            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/10152021_MDY_PCB1_1/air_purifier_V2.X/mcc_generated_files/traps.c</file>
+            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/Git_air_purifier_project/air_purifier_V2.X/74595.h</file>
+            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/Git_air_purifier_project/air_purifier_V2.X/main.h</file>
+            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/Git_air_purifier_project/air_purifier_V2.X/led_controller.h</file>
+            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/Git_air_purifier_project/air_purifier_V2.X/74595.c</file>
+            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/Git_air_purifier_project/air_purifier_V2.X/main.c</file>
+            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/Git_air_purifier_project/air_purifier_V2.X/mcc_generated_files/system.c</file>
+            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/Git_air_purifier_project/air_purifier_V2.X/led_controller.c</file>
+            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/Git_air_purifier_project/air_purifier_V2.X/mcc_generated_files/pin_manager.h</file>
+            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/Git_air_purifier_project/air_purifier_V2.X/seven_segment_controller.c</file>
+            <file>file:/D:/Job/air_purifier_carriers/Code/New_release/Git_air_purifier_project/air_purifier_V2.X/seven_segment_controller.h</file>
         </group>
     </open-files>
 </project-private>

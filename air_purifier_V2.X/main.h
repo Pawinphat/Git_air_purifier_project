@@ -22,3 +22,16 @@ extern "C" {
 
 #endif	/* MAIN_H */
 
+#include <stdbool.h>
+#include <stdint.h>
+
+typedef struct{
+    bool bool_new_refresh_display;
+    uint8_t u8Speedfan;
+}type_status_system;
+
+extern type_status_system t_using_status_system;
+
+void initial_program_config (void);
+void ClearStatus_led (void);
+
