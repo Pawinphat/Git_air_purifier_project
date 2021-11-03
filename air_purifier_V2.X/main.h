@@ -27,7 +27,22 @@ extern "C" {
 
 typedef struct{
     bool bool_new_refresh_display;
+    bool bool_new_touch_switch;
+    bool bool_Lock_switch;
+    uint8_t u8Mem_time_on;
+    uint8_t u8Mem_time_off;
+    uint32_t u32Count_timer_filter;
     uint8_t u8Speedfan;
+    
+    // mode 0: force display, 
+    //      1: temperature
+    //      2: Humidity
+    //      3: PM2.5
+    uint8_t u8Display_mode; 
+    uint8_t au8Send_to_sevensegments[3]; // digit 1 -3 
+    float fDHT10_Temperature;
+    float fDHT10_Humidity;
+    float fPM2_5;
 }type_status_system;
 
 extern type_status_system t_using_status_system;

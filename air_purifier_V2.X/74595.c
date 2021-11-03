@@ -676,6 +676,7 @@ void delayloop (unsigned int del);
         PIN_HC74595_DATA_LAT_PORT_2 = 0;    // Data PIN 14 (74595))
         PIN_HC74595_OEN_TRIS_PORT_2 = 0;
         PIN_HC74595_OEN_LAT_PORT_2 = 1;     // Disabled output PIN 13 (74595)
+        PIN_HC74595_OEN_LAT_PORT_2 = 0; // Enabled output PIN 13 (74595)
     }
 
     /**
@@ -690,7 +691,7 @@ void delayloop (unsigned int del);
         PIN_HC74595_OEN_LAT_PORT_2 = 0; // Enabled output  PIN 13 (74595)
     
         for (i=0 ; i<8 ; i++) {
-            if (direction == HC595_MSB_FIRST_PORT_2) {
+            if (direction == HC595_MSB_FIRST) {
                 ibuffer = (uint8_t)(ui8tvalue << i);
                 if((ibuffer & 0x80) == 0x80){
                     PIN_HC74595_DATA_LAT_PORT_2 = 1;
@@ -718,7 +719,7 @@ void delayloop (unsigned int del);
     * @param value
     */
 
-    void HC595SendValue_many_IC_PORT_3(uint8_t ui8tvalue, uint8_t direction, uint8_t Latchdisplay )
+    void HC595SendValue_many_IC_PORT_2(uint8_t ui8tvalue, uint8_t direction, uint8_t Latchdisplay )
     {
         uint8_t i;
         uint8_t ibuffer;
@@ -726,7 +727,7 @@ void delayloop (unsigned int del);
         PIN_HC74595_OEN_LAT_PORT_2 = 0; // Enabled output  PIN 13 (74595)
     
         for (i=0 ; i<8 ; i++) {
-            if (direction == HC595_MSB_FIRST_PORT_2) {
+            if (direction == HC595_MSB_FIRST) {
                 ibuffer = (uint8_t)(ui8tvalue << i);
                 if((ibuffer & 0x80) == 0x80){
                     PIN_HC74595_DATA_LAT_PORT_2 = 1;
@@ -741,7 +742,7 @@ void delayloop (unsigned int del);
                     PIN_HC74595_DATA_LAT_PORT_2 = 1;
                 }   
                 else{
-                    PIN_HC74595_DATA_LAT_PORT_3 = 0;    
+                    PIN_HC74595_DATA_LAT_PORT_2 = 0;    
                 }
             }
             HC595ToggleClk_PORT_2();

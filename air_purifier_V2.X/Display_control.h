@@ -45,9 +45,10 @@ typedef struct{
 extern typeLED_FAN t_UsingStructLED_FAN;
 
 uint16_t LED_sum_valueStruct (uint8_t u8SelectStruct);
-
 void LED_Clear_data (void);
+
 void Sevensegments_Clear (void);
+void load_data_to_display(void);
 
 void Refresh_Display (void);
 

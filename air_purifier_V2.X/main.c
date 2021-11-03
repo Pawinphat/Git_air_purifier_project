@@ -88,9 +88,9 @@ int main(void)
     initial_program_config();
     
   //  OP_BUZZER_SetLow();
-    TMR2_Stop();   
-    HC595Init_PORT_1();
+    TMR2_Stop();   ;
     OP_LED_PWM_SetHigh();
+    OP_SEG_PWM_SetHigh();
     
 
     t_using_status_system.bool_new_refresh_display = true;
@@ -162,6 +162,9 @@ void Delaytime (uint16_t del)
 
 void initial_program_config (void)
 {
+    HC595Init_PORT_1();
+    HC595Init_PORT_2();
+    
     ClearStatus_led();
 }
 
