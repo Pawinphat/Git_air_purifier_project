@@ -102,14 +102,14 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x8ec           0xd62  (3426)
-_0559ab40618a3d01            0xaec                0x14            0x1e  (30)
+_055bab40618a6b0e            0xaec                0x14            0x1e  (30)
 .text                        0xb00              0x145e          0x1e8d  (7821)
 .dinit                      0x1f5e                0x80            0xc0  (192)
-.text                       0x1fde               0x134           0x1ce  (462)
-.init.delay32               0x2112                0x1c            0x2a  (42)
-.text                       0x212e                0x18            0x24  (36)
+.text                       0x1fde               0x140           0x1e0  (480)
+.init.delay32               0x211e                0x1c            0x2a  (42)
+.text                       0x213a                0x18            0x24  (36)
 
-                 Total "program" memory used (bytes):         0x2ee9  (12009) 4%
+                 Total "program" memory used (bytes):         0x2efb  (12027) 4%
 
 
 "data" Memory  [Origin = 0x1000, Length = 0x8000]
@@ -301,22 +301,22 @@ External Symbols in Program Memory (by address):
                   0x001e76                  _ClearStatus_led
                   0x001ed6                  _INTERRUPT_Initialize
                   0x001fde                  _DHT10_Writer
-                  0x00203c                  _DHT10_initization
-                  0x002048                  _CLOCK_Initialize
-                  0x002096                  _ADC1_Initialize
-                  0x0020ba                  _ADC1_SetInterruptHandler
-                  0x0020f4                  _SYSTEM_Initialize
-                  0x002112                  ___delay32
+                  0x002048                  _DHT10_initization
+                  0x002054                  _CLOCK_Initialize
+                  0x0020a2                  _ADC1_Initialize
+                  0x0020c6                  _ADC1_SetInterruptHandler
+                  0x002100                  _SYSTEM_Initialize
+                  0x00211e                  ___delay32
                   0x02affa                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x002096                  _ADC1_Initialize
-                  0x0020ba                  _ADC1_SetInterruptHandler
-                  0x002048                  _CLOCK_Initialize
+                  0x0020a2                  _ADC1_Initialize
+                  0x0020c6                  _ADC1_SetInterruptHandler
+                  0x002054                  _CLOCK_Initialize
                   0x001e76                  _ClearStatus_led
                   0x001fde                  _DHT10_Writer
-                  0x00203c                  _DHT10_initization
+                  0x002048                  _DHT10_initization
                   0x001e58                  _Delaytime
                   0x001902                  _EMC1001_Read
                   0x001216                  _HC595Init_PORT_1
@@ -362,7 +362,7 @@ External Symbols in Program Memory (by name):
                   0x001b92                  _RESET_CauseClearAll
                   0x001a86                  _RESET_GetCause
                   0x00131c                  _Refresh_Display
-                  0x0020f4                  _SYSTEM_Initialize
+                  0x002100                  _SYSTEM_Initialize
                   0x0014fc                  _Sevensegments_Clear
                   0x001502                  _Sevensegments_convert_float_to_display
                   0x001ce8                  _TMR2_Counter16BitGet
@@ -445,7 +445,7 @@ External Symbols in Program Memory (by name):
                   0x0005b6                  __U2ErrInterrupt
                   0x00054a                  __U2RXInterrupt
                   0x0004e8                  __U2TXInterrupt
-                  0x002112                  ___delay32
+                  0x00211e                  ___delay32
                   0x000248                  __data_init
                   0x000248                  __data_init_extended
                   0x00023c                  __psv_init
@@ -589,7 +589,7 @@ __FOSCSEL
 
 __FGS             0x02affa          0x2
  *(__FGS.sec*)
- __FGS.sec        0x02affa          0x2 /CW/_FGS€8
+ __FGS.sec        0x02affa          0x2 /CW/_FGS
                   0x02affa                  __FGS.sec
 
 __FUID0
@@ -651,7 +651,7 @@ __FUID3
  .debug_abbrev    0x0014bb        0x148 build/default/production/LP5012_rgb_led.o
  .debug_abbrev    0x001603         0xb6 build/default/production/DHT10.o
 
-.debug_line       0x000000       0x1a21
+.debug_line       0x000000       0x1a22
  *(.debug_line)
  .debug_line      0x000000        0x136 build/default/production/mcc_generated_files/adc1.o
  .debug_line      0x000136        0x166 build/default/production/mcc_generated_files/traps.o
@@ -671,7 +671,7 @@ __FUID3
  .debug_line      0x0015b9        0x18e build/default/production/74595.o
  .debug_line      0x001747         0xf7 build/default/production/Display_control.o
  .debug_line      0x00183e        0x124 build/default/production/LP5012_rgb_led.o
- .debug_line      0x001962         0xbf build/default/production/DHT10.o
+ .debug_line      0x001962         0xc0 build/default/production/DHT10.o
 
 .debug_frame      0x000000       0x1432
  *(.debug_frame)
@@ -1781,7 +1781,7 @@ LOAD c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-c-elf.a
 END GROUP
 OUTPUT(dist/default/production/air_purifier_V2.X.production.elf elf32-pic30)
-LOAD /CW/_FGS€8
+LOAD /CW/_FGS
 LOAD jump_table
 LOAD default_isr
 LOAD data_init
@@ -2016,9 +2016,9 @@ __c30_signature
  .config_JTAGEN
                   0x02aff0          0x2 build/default/production/mcc_generated_files/system.o
 
-_0559ab40618a3d01
+_055bab40618a6b0e
                     0x8aec         0x14 load address 0x000aec  
- _0559ab40618a3d01
+ _055bab40618a6b0e
                     0x8aec         0x14 build/default/production/Display_control.o
                     0x8aec                  _table_font_sevensegment
 
@@ -2160,24 +2160,24 @@ _0559ab40618a3d01
 .dinit            0x001f5e         0x80
  .dinit           0x001f5e         0x80 data_init
 
-.text             0x001fde        0x134
- .text            0x001fde         0x6a build/default/production/DHT10.o
+.text             0x001fde        0x140
+ .text            0x001fde         0x76 build/default/production/DHT10.o
                   0x001fde                  _DHT10_Writer
-                  0x00203c                  _DHT10_initization
- .text            0x002048         0x4e build/default/production/mcc_generated_files/clock.o
-                  0x002048                  _CLOCK_Initialize
- .text            0x002096         0x4c build/default/production/mcc_generated_files/adc1.o
-                  0x002096                  _ADC1_Initialize
-                  0x0020b4                  _ADC1_CallBack
-                  0x0020ba                  _ADC1_SetInterruptHandler
-                  0x0020c6                  _ADC1_Tasks
- .text            0x0020e2         0x30 build/default/production/mcc_generated_files/system.o
-                  0x0020f4                  _SYSTEM_Initialize
+                  0x002048                  _DHT10_initization
+ .text            0x002054         0x4e build/default/production/mcc_generated_files/clock.o
+                  0x002054                  _CLOCK_Initialize
+ .text            0x0020a2         0x4c build/default/production/mcc_generated_files/adc1.o
+                  0x0020a2                  _ADC1_Initialize
+                  0x0020c0                  _ADC1_CallBack
+                  0x0020c6                  _ADC1_SetInterruptHandler
+                  0x0020d2                  _ADC1_Tasks
+ .text            0x0020ee         0x30 build/default/production/mcc_generated_files/system.o
+                  0x002100                  _SYSTEM_Initialize
 
-.init.delay32     0x002112         0x1c
- .init.delay32    0x002112         0x1c c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(delay32ep.Leo)
-                  0x002112                  ___delay32
+.init.delay32     0x00211e         0x1c
+ .init.delay32    0x00211e         0x1c c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(delay32ep.Leo)
+                  0x00211e                  ___delay32
 
-.text             0x00212e         0x18
- .text            0x00212e         0x18 build/default/production/mcc_generated_files/traps.o
-                  0x00212e                  _TRAPS_halt_on_error
+.text             0x00213a         0x18
+ .text            0x00213a         0x18 build/default/production/mcc_generated_files/traps.o
+                  0x00213a                  _TRAPS_halt_on_error

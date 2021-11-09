@@ -45,13 +45,12 @@ uint8_t DHT10_Writer (uint8_t *pData, uint8_t u16Totalsize_data)
             slaveTimeOut = 0;
            // break;
         }
-    /*
+    
         if(I2C2_MasterQueueIsFull() == true){
-         //   I2C2_Initialize();
-            Nop();
+            I2C2_Initialize();
             return(0);
         }
-    */
+   
         // exit if the last transaction failed
         if (status == I2C2_MESSAGE_FAIL){
             return(0);
