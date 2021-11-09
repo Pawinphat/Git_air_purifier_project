@@ -139,12 +139,10 @@ void Sevensegments_Clear (void)
     
 }
 
-
-
-
-
-
-
+void Sevensegments_convert_float_to_display (void)
+{
+    
+}
 
 
 /*

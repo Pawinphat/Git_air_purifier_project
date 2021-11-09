@@ -71,6 +71,7 @@
 #include "main.h"
 #include "74595.h"
 #include "Display_control.h"
+#include "LP5012_rgb_led.h"
 
 type_status_system t_using_status_system;
 
@@ -83,6 +84,7 @@ int main(void)
 {
     uint8_t u8Loop;
     uint16_t sum;
+        uint8_t data;
     // initialize the device
     SYSTEM_Initialize();
     initial_program_config();
@@ -91,50 +93,24 @@ int main(void)
     TMR2_Stop();   ;
     OP_LED_PWM_SetHigh();
     OP_SEG_PWM_SetHigh();
-    
-
+   
     t_using_status_system.bool_new_refresh_display = true;
    
+    uint8_t au8Data [3] = {0xe1, 0x08, 0x00};
     while (1)
     {
-        
-       Refresh_Display();
 
-       t_UsingStructLED_FAN.u8Ledfan_auto_spa = 1;
-       t_UsingStructLED_FAN.u8Ledfan_low_spl  = 0;      
-       t_UsingStructLED_FAN.u8Ledfan_medium_spm = 0;
-       t_UsingStructLED_FAN.u8Ledfan_high_sph = 0;
-       
-       t_using_status_system.bool_new_refresh_display = true;
-           Refresh_Display();
-       __delay_ms(1200);
-       
-       t_UsingStructLED_FAN.u8Ledfan_auto_spa = 0;
-       t_UsingStructLED_FAN.u8Ledfan_low_spl  = 1;      
-       t_UsingStructLED_FAN.u8Ledfan_medium_spm = 0;
-       t_UsingStructLED_FAN.u8Ledfan_high_sph = 0;
-       
-       t_using_status_system.bool_new_refresh_display = true;
-           Refresh_Display();
-       __delay_ms(1200);
-       
-       t_UsingStructLED_FAN.u8Ledfan_auto_spa = 0;
-       t_UsingStructLED_FAN.u8Ledfan_low_spl  = 0;      
-       t_UsingStructLED_FAN.u8Ledfan_medium_spm = 1;
-       t_UsingStructLED_FAN.u8Ledfan_high_sph = 0;
-       
-       t_using_status_system.bool_new_refresh_display = true;
-           Refresh_Display();
-       __delay_ms(1200);
-       
-       t_UsingStructLED_FAN.u8Ledfan_auto_spa = 0;
-       t_UsingStructLED_FAN.u8Ledfan_low_spl  = 0;      
-       t_UsingStructLED_FAN.u8Ledfan_medium_spm = 0;
-       t_UsingStructLED_FAN.u8Ledfan_high_sph = 1;
-       
-       t_using_status_system.bool_new_refresh_display = true;
-           Refresh_Display();
-       __delay_ms(1200);
+       Refresh_Display();
+      //  MCHP24AA512_Read( uint16_t address,
+      //                    uint8_t *pData,
+      //                    uint16_t nCount);
+     //  MCHP24AA512_Read(0x01,au8Data, 8);
+       DHT10_initization();
+       __delay_us(100);
+
+      // EMC1001_Read(0xfd, &data);
+                                            
+                                            
        
        
       //  OP_BUZZER_Toggle();

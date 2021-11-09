@@ -122,10 +122,10 @@ void PIN_MANAGER_Initialize (void)
      ***************************************************************************/
     __builtin_write_OSCCONL(OSCCON & 0xbf); // unlock PPS
 
+    RPOR2bits.RP38R = 0x0003;    //RB6->UART2:U2TX
     RPINR19bits.U2RXR = 0x0025;    //RB5->UART2:U2RX
     RPINR18bits.U1RXR = 0x002A;    //RB10->UART1:U1RX
     RPOR4bits.RP43R = 0x0001;    //RB11->UART1:U1TX
-    RPOR2bits.RP38R = 0x0003;    //RB6->UART2:U2TX
 
     __builtin_write_OSCCONL(OSCCON | 0x40); // lock PPS
 }

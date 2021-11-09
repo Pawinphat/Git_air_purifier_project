@@ -78,28 +78,28 @@
 #include "clock.h"
 #include "system.h"
 #include "system_types.h"
-#include "tmr2.h"
+#include "adc1.h"
 #include "i2c1.h"
-#include "tmr4.h"
 #include "i2c2.h"
-#include "uart2.h"
 #include "uart1.h"
+#include "uart2.h"
 #include "interrupt_manager.h"
 #include "traps.h"
-#include "adc1.h"
+#include "tmr4.h"
+#include "tmr2.h"
 
 void SYSTEM_Initialize(void)
 {
     PIN_MANAGER_Initialize();
-    CLOCK_Initialize();
     INTERRUPT_Initialize();
+    CLOCK_Initialize();
     UART2_Initialize();
     I2C1_Initialize();
     UART1_Initialize();
     ADC1_Initialize();
     TMR4_Initialize();
-    TMR2_Initialize();
     I2C2_Initialize();
+    TMR2_Initialize();
     SYSTEM_CORCONModeOperatingSet(CORCON_MODE_PORVALUES);
 }
 

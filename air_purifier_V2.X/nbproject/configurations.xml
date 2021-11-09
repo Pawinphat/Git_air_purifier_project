@@ -29,6 +29,8 @@
       <itemPath>74595.h</itemPath>
       <itemPath>main.h</itemPath>
       <itemPath>Display_control.h</itemPath>
+      <itemPath>LP5012_rgb_led.h</itemPath>
+      <itemPath>DHT10.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -58,6 +60,8 @@
       <itemPath>main.c</itemPath>
       <itemPath>74595.c</itemPath>
       <itemPath>Display_control.c</itemPath>
+      <itemPath>LP5012_rgb_led.c</itemPath>
+      <itemPath>DHT10.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

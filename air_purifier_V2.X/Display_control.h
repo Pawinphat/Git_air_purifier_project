@@ -49,6 +49,7 @@ void LED_Clear_data (void);
 
 void Sevensegments_Clear (void);
 void load_data_to_display(void);
+void Sevensegments_convert_float_to_display (void);
 
 void Refresh_Display (void);
 
