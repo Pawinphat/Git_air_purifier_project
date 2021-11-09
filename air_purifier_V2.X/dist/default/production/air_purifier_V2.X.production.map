@@ -102,7 +102,7 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x8ec           0xd62  (3426)
-_055bab40618a6b0e            0xaec                0x14            0x1e  (30)
+_04eb2b40618a8f28            0xaec                0x14            0x1e  (30)
 .text                        0xb00              0x145e          0x1e8d  (7821)
 .dinit                      0x1f5e                0x80            0xc0  (192)
 .text                       0x1fde               0x140           0x1e0  (480)
@@ -2016,9 +2016,9 @@ __c30_signature
  .config_JTAGEN
                   0x02aff0          0x2 build/default/production/mcc_generated_files/system.o
 
-_055bab40618a6b0e
+_04eb2b40618a8f28
                     0x8aec         0x14 load address 0x000aec  
- _055bab40618a6b0e
+ _04eb2b40618a8f28
                     0x8aec         0x14 build/default/production/Display_control.o
                     0x8aec                  _table_font_sevensegment
 

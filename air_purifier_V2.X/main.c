@@ -84,13 +84,13 @@ int main(void)
 {
     uint8_t u8Loop;
     uint16_t sum;
-        uint8_t data;
+    uint8_t data;
     // initialize the device
     SYSTEM_Initialize();
     initial_program_config();
     
   //  OP_BUZZER_SetLow();
-    TMR2_Stop();   ;
+    TMR2_Stop();
     OP_LED_PWM_SetHigh();
     OP_SEG_PWM_SetHigh();
    
@@ -104,9 +104,9 @@ int main(void)
       //  MCHP24AA512_Read( uint16_t address,
       //                    uint8_t *pData,
       //                    uint16_t nCount);
-     //  MCHP24AA512_Read(0x01,au8Data, 8);
-       DHT10_initization();
-       __delay_us(100);
+      //  MCHP24AA512_Read(0x01,au8Data, 8);
+        DHT10_initization();
+        __delay_ms(2);
 
       // EMC1001_Read(0xfd, &data);
                                             
