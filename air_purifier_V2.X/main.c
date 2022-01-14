@@ -105,8 +105,10 @@ int main(void)
       //                    uint8_t *pData,
       //                    uint16_t nCount);
       //  MCHP24AA512_Read(0x01,au8Data, 8);
+       // UART1_Write('T'); // TEST UART 1 (RS485)
         DHT10_initization();
-        __delay_ms(2);
+        //Delaytime_ms(200);
+
 
       // EMC1001_Read(0xfd, &data);
                                             
@@ -131,9 +133,12 @@ int main(void)
     return 1;
 }
 
-void Delaytime (uint16_t del)
+void Delaytime_ms (uint16_t u16Delay)
 {
-    for(del=del; del>0; del--);
+    static u16Obj_Delay ;
+    u16Obj_Delay = u16Delay;
+    
+    __delay_ms(u16Obj_Delay);
 }
 
 void initial_program_config (void)

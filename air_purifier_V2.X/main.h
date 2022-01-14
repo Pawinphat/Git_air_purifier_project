@@ -49,4 +49,5 @@ extern type_status_system t_using_status_system;
 
 void initial_program_config (void);
 void ClearStatus_led (void);
+void Delaytime_ms (uint16_t u16Delay);
 

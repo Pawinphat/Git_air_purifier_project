@@ -90,7 +90,7 @@ typedef enum
     I2C2_MESSAGE_ADDRESS_NO_ACK,
     I2C2_DATA_NO_ACK,
     I2C2_LOST_STATE
-} I2C2_MESSAGE_STATUS;
+}   I2C2_MESSAGE_STATUS;
 
 /**
   I2C Driver Transaction Request Block (TRB) type definition.
