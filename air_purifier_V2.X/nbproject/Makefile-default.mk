@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/adc1.c mcc_generated_files/traps.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/uart1.c mcc_generated_files/uart2.c mcc_generated_files/i2c2.c mcc_generated_files/i2c1.c mcc_generated_files/clock.c mcc_generated_files/interrupt_manager.c mcc_generated_files/reset.c mcc_generated_files/tmr2.c mcc_generated_files/tmr4.c mcc_generated_files/system.c main.c 74595.c Display_control.c LP5012_rgb_led.c DHT10.c
+SOURCEFILES_QUOTED_IF_SPACED=mcc_generated_files/adc1.c mcc_generated_files/traps.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/uart1.c mcc_generated_files/uart2.c mcc_generated_files/i2c2.c mcc_generated_files/i2c1.c mcc_generated_files/clock.c mcc_generated_files/interrupt_manager.c mcc_generated_files/reset.c mcc_generated_files/tmr2.c mcc_generated_files/tmr4.c mcc_generated_files/system.c main.c 74595.c Display_control.c LP5012_rgb_led.c DHT10.c Persenter.c Model.c View.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/adc1.o ${OBJECTDIR}/mcc_generated_files/traps.o ${OBJECTDIR}/mcc_generated_files/mcc.o ${OBJECTDIR}/mcc_generated_files/pin_manager.o ${OBJECTDIR}/mcc_generated_files/uart1.o ${OBJECTDIR}/mcc_generated_files/uart2.o ${OBJECTDIR}/mcc_generated_files/i2c2.o ${OBJECTDIR}/mcc_generated_files/i2c1.o ${OBJECTDIR}/mcc_generated_files/clock.o ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o ${OBJECTDIR}/mcc_generated_files/reset.o ${OBJECTDIR}/mcc_generated_files/tmr2.o ${OBJECTDIR}/mcc_generated_files/tmr4.o ${OBJECTDIR}/mcc_generated_files/system.o ${OBJECTDIR}/main.o ${OBJECTDIR}/74595.o ${OBJECTDIR}/Display_control.o ${OBJECTDIR}/LP5012_rgb_led.o ${OBJECTDIR}/DHT10.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/adc1.o.d ${OBJECTDIR}/mcc_generated_files/traps.o.d ${OBJECTDIR}/mcc_generated_files/mcc.o.d ${OBJECTDIR}/mcc_generated_files/pin_manager.o.d ${OBJECTDIR}/mcc_generated_files/uart1.o.d ${OBJECTDIR}/mcc_generated_files/uart2.o.d ${OBJECTDIR}/mcc_generated_files/i2c2.o.d ${OBJECTDIR}/mcc_generated_files/i2c1.o.d ${OBJECTDIR}/mcc_generated_files/clock.o.d ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o.d ${OBJECTDIR}/mcc_generated_files/reset.o.d ${OBJECTDIR}/mcc_generated_files/tmr2.o.d ${OBJECTDIR}/mcc_generated_files/tmr4.o.d ${OBJECTDIR}/mcc_generated_files/system.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/74595.o.d ${OBJECTDIR}/Display_control.o.d ${OBJECTDIR}/LP5012_rgb_led.o.d ${OBJECTDIR}/DHT10.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/mcc_generated_files/adc1.o ${OBJECTDIR}/mcc_generated_files/traps.o ${OBJECTDIR}/mcc_generated_files/mcc.o ${OBJECTDIR}/mcc_generated_files/pin_manager.o ${OBJECTDIR}/mcc_generated_files/uart1.o ${OBJECTDIR}/mcc_generated_files/uart2.o ${OBJECTDIR}/mcc_generated_files/i2c2.o ${OBJECTDIR}/mcc_generated_files/i2c1.o ${OBJECTDIR}/mcc_generated_files/clock.o ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o ${OBJECTDIR}/mcc_generated_files/reset.o ${OBJECTDIR}/mcc_generated_files/tmr2.o ${OBJECTDIR}/mcc_generated_files/tmr4.o ${OBJECTDIR}/mcc_generated_files/system.o ${OBJECTDIR}/main.o ${OBJECTDIR}/74595.o ${OBJECTDIR}/Display_control.o ${OBJECTDIR}/LP5012_rgb_led.o ${OBJECTDIR}/DHT10.o ${OBJECTDIR}/Persenter.o ${OBJECTDIR}/Model.o ${OBJECTDIR}/View.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/mcc_generated_files/adc1.o.d ${OBJECTDIR}/mcc_generated_files/traps.o.d ${OBJECTDIR}/mcc_generated_files/mcc.o.d ${OBJECTDIR}/mcc_generated_files/pin_manager.o.d ${OBJECTDIR}/mcc_generated_files/uart1.o.d ${OBJECTDIR}/mcc_generated_files/uart2.o.d ${OBJECTDIR}/mcc_generated_files/i2c2.o.d ${OBJECTDIR}/mcc_generated_files/i2c1.o.d ${OBJECTDIR}/mcc_generated_files/clock.o.d ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o.d ${OBJECTDIR}/mcc_generated_files/reset.o.d ${OBJECTDIR}/mcc_generated_files/tmr2.o.d ${OBJECTDIR}/mcc_generated_files/tmr4.o.d ${OBJECTDIR}/mcc_generated_files/system.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/74595.o.d ${OBJECTDIR}/Display_control.o.d ${OBJECTDIR}/LP5012_rgb_led.o.d ${OBJECTDIR}/DHT10.o.d ${OBJECTDIR}/Persenter.o.d ${OBJECTDIR}/Model.o.d ${OBJECTDIR}/View.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/mcc_generated_files/adc1.o ${OBJECTDIR}/mcc_generated_files/traps.o ${OBJECTDIR}/mcc_generated_files/mcc.o ${OBJECTDIR}/mcc_generated_files/pin_manager.o ${OBJECTDIR}/mcc_generated_files/uart1.o ${OBJECTDIR}/mcc_generated_files/uart2.o ${OBJECTDIR}/mcc_generated_files/i2c2.o ${OBJECTDIR}/mcc_generated_files/i2c1.o ${OBJECTDIR}/mcc_generated_files/clock.o ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o ${OBJECTDIR}/mcc_generated_files/reset.o ${OBJECTDIR}/mcc_generated_files/tmr2.o ${OBJECTDIR}/mcc_generated_files/tmr4.o ${OBJECTDIR}/mcc_generated_files/system.o ${OBJECTDIR}/main.o ${OBJECTDIR}/74595.o ${OBJECTDIR}/Display_control.o ${OBJECTDIR}/LP5012_rgb_led.o ${OBJECTDIR}/DHT10.o
+OBJECTFILES=${OBJECTDIR}/mcc_generated_files/adc1.o ${OBJECTDIR}/mcc_generated_files/traps.o ${OBJECTDIR}/mcc_generated_files/mcc.o ${OBJECTDIR}/mcc_generated_files/pin_manager.o ${OBJECTDIR}/mcc_generated_files/uart1.o ${OBJECTDIR}/mcc_generated_files/uart2.o ${OBJECTDIR}/mcc_generated_files/i2c2.o ${OBJECTDIR}/mcc_generated_files/i2c1.o ${OBJECTDIR}/mcc_generated_files/clock.o ${OBJECTDIR}/mcc_generated_files/interrupt_manager.o ${OBJECTDIR}/mcc_generated_files/reset.o ${OBJECTDIR}/mcc_generated_files/tmr2.o ${OBJECTDIR}/mcc_generated_files/tmr4.o ${OBJECTDIR}/mcc_generated_files/system.o ${OBJECTDIR}/main.o ${OBJECTDIR}/74595.o ${OBJECTDIR}/Display_control.o ${OBJECTDIR}/LP5012_rgb_led.o ${OBJECTDIR}/DHT10.o ${OBJECTDIR}/Persenter.o ${OBJECTDIR}/Model.o ${OBJECTDIR}/View.o
 
 # Source Files
-SOURCEFILES=mcc_generated_files/adc1.c mcc_generated_files/traps.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/uart1.c mcc_generated_files/uart2.c mcc_generated_files/i2c2.c mcc_generated_files/i2c1.c mcc_generated_files/clock.c mcc_generated_files/interrupt_manager.c mcc_generated_files/reset.c mcc_generated_files/tmr2.c mcc_generated_files/tmr4.c mcc_generated_files/system.c main.c 74595.c Display_control.c LP5012_rgb_led.c DHT10.c
+SOURCEFILES=mcc_generated_files/adc1.c mcc_generated_files/traps.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/uart1.c mcc_generated_files/uart2.c mcc_generated_files/i2c2.c mcc_generated_files/i2c1.c mcc_generated_files/clock.c mcc_generated_files/interrupt_manager.c mcc_generated_files/reset.c mcc_generated_files/tmr2.c mcc_generated_files/tmr4.c mcc_generated_files/system.c main.c 74595.c Display_control.c LP5012_rgb_led.c DHT10.c Persenter.c Model.c View.c
 
 
 
@@ -209,6 +209,24 @@ ${OBJECTDIR}/DHT10.o: DHT10.c  .generated_files/flags/default/2818af8251bdf052e7
 	@${RM} ${OBJECTDIR}/DHT10.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  DHT10.c  -o ${OBJECTDIR}/DHT10.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/DHT10.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/Persenter.o: Persenter.c  .generated_files/flags/default/ca7f3b8198f9f77380cf3dc2b68366fc14c3f2a6 .generated_files/flags/default/cf746db493ae6e9c8dd43321e46753b1122a0084
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Persenter.o.d 
+	@${RM} ${OBJECTDIR}/Persenter.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Persenter.c  -o ${OBJECTDIR}/Persenter.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/Persenter.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/Model.o: Model.c  .generated_files/flags/default/851bc393bc42d5be53291578e4a5110490eb5919 .generated_files/flags/default/cf746db493ae6e9c8dd43321e46753b1122a0084
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Model.o.d 
+	@${RM} ${OBJECTDIR}/Model.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Model.c  -o ${OBJECTDIR}/Model.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/Model.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/View.o: View.c  .generated_files/flags/default/65826b6f8458e3a508fb5212c6341bcd0b09b613 .generated_files/flags/default/cf746db493ae6e9c8dd43321e46753b1122a0084
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/View.o.d 
+	@${RM} ${OBJECTDIR}/View.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  View.c  -o ${OBJECTDIR}/View.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/View.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 else
 ${OBJECTDIR}/mcc_generated_files/adc1.o: mcc_generated_files/adc1.c  .generated_files/flags/default/a764b0e1309494c95833cecbd658d14e8411121d .generated_files/flags/default/cf746db493ae6e9c8dd43321e46753b1122a0084
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files" 
@@ -323,6 +341,24 @@ ${OBJECTDIR}/DHT10.o: DHT10.c  .generated_files/flags/default/1355973826d703fd99
 	@${RM} ${OBJECTDIR}/DHT10.o.d 
 	@${RM} ${OBJECTDIR}/DHT10.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  DHT10.c  -o ${OBJECTDIR}/DHT10.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/DHT10.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/Persenter.o: Persenter.c  .generated_files/flags/default/b42ce20e729602c739fa5be84c460adbdfd65dcc .generated_files/flags/default/cf746db493ae6e9c8dd43321e46753b1122a0084
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Persenter.o.d 
+	@${RM} ${OBJECTDIR}/Persenter.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Persenter.c  -o ${OBJECTDIR}/Persenter.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/Persenter.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/Model.o: Model.c  .generated_files/flags/default/a90853f9a24813de7321a52097fb29f1e66d23a .generated_files/flags/default/cf746db493ae6e9c8dd43321e46753b1122a0084
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Model.o.d 
+	@${RM} ${OBJECTDIR}/Model.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Model.c  -o ${OBJECTDIR}/Model.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/Model.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/View.o: View.c  .generated_files/flags/default/c0354e2dc217f7233dc1ca32f4d9b915a7ac6f7c .generated_files/flags/default/cf746db493ae6e9c8dd43321e46753b1122a0084
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/View.o.d 
+	@${RM} ${OBJECTDIR}/View.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  View.c  -o ${OBJECTDIR}/View.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/View.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 

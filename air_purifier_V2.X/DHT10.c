@@ -83,8 +83,9 @@ uint8_t DHT20_Sequential_Read(uint16_t address,
             // write address and data to DTH10 (I2C signal send thru pin)
             //*******************************************
             I2C2_MasterRead(pD, 7, 0x38, &status_dht_rd);
+      //      UART1_Write(pD[7]);
             if(pD[0] == 0x18){
-                UART1_Write('U');  
+           //     UART1_Write('U');  
               //  DHT20_Writer(au8init_DHT20,3);
             }
 
@@ -96,7 +97,7 @@ uint8_t DHT20_Sequential_Read(uint16_t address,
             // check for max retry and skip this byte
                 if (slaveTimeOut == DHT10_DEVICE_TIMEOUT){
               //     UART1_Write('L');  
-                    UART1_Write('T');  
+                 //   UART1_Write('T');  
                     return (0);
                 }
                 else
@@ -118,7 +119,7 @@ uint8_t DHT20_Sequential_Read(uint16_t address,
    
         // exit if the last transaction failed
         if (status_dht_rd == I2C2_MESSAGE_FAIL){
-            UART1_Write('F');  
+        //    UART1_Write('F');  
             return(0);
         }
   //  }
@@ -143,20 +144,24 @@ void DHT10_initization (void)
       Delaytime_ms(20);
       
       DHT10_Writer(au8init_DHT10,3);
-      
-      UART1_Write(0x11);
-      UART1_Write(status_dht_wr);
-      
+          
       Delaytime_ms(82);
       
    //   DHT10_Writer(au8init_DHT10_1,3);
       
-      DHT20_Sequential_Read(0x38, au8DHT20_Read, 6);
+      DHT20_Sequential_Read(0x38, au8DHT20_Read, 7);
       
      //  UART1_Write(0x85);
      //  UART1_Write(status_dht_rd);
        
        Delaytime_ms(50);
      //  __delay_ms(10);
+      UART1_Write(au8DHT20_Read[0]);
+      UART1_Write(au8DHT20_Read[1]);
+      UART1_Write(au8DHT20_Read[2]);
+      UART1_Write(au8DHT20_Read[3]);
+      UART1_Write(au8DHT20_Read[4]);
+      UART1_Write(au8DHT20_Read[5]);
+      UART1_Write(au8DHT20_Read[6]);
 }
 

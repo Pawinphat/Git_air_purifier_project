@@ -31,6 +31,9 @@
       <itemPath>Display_control.h</itemPath>
       <itemPath>LP5012_rgb_led.h</itemPath>
       <itemPath>DHT10.h</itemPath>
+      <itemPath>Persenter.h</itemPath>
+      <itemPath>Model.h</itemPath>
+      <itemPath>View.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -62,6 +65,9 @@
       <itemPath>Display_control.c</itemPath>
       <itemPath>LP5012_rgb_led.c</itemPath>
       <itemPath>DHT10.c</itemPath>
+      <itemPath>Persenter.c</itemPath>
+      <itemPath>Model.c</itemPath>
+      <itemPath>View.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

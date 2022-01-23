@@ -38,6 +38,9 @@ Command:
   build/default/production/Display_control.o \
   build/default/production/LP5012_rgb_led.o \
   build/default/production/DHT10.o \
+  build/default/production/Persenter.o \
+  build/default/production/Model.o \
+  build/default/production/View.o \
   --local-stack \
   --defsym=__MPLAB_BUILD=1 \
   -Tp24EP256GP206.gld.00 \
@@ -108,14 +111,14 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0xb8a          0x114f  (4431)
-_055aab4061e1443b            0xd8a                0x14            0x1e  (30)
-.text                        0xd9e              0x14f6          0x1f71  (8049)
-.dinit                      0x2294                0x96            0xe1  (225)
-.text                       0x232a               0x152           0x1fb  (507)
-.init.delay32               0x247c                0x1c            0x2a  (42)
-.text                       0x2498                0x18            0x24  (36)
+_04df2b4061ecabeb            0xd8a                0x14            0x1e  (30)
+.text                        0xd9e              0x150e          0x1f95  (8085)
+.dinit                      0x22ac                0x96            0xe1  (225)
+.text                       0x2342               0x152           0x1fb  (507)
+.init.delay32               0x2494                0x1c            0x2a  (42)
+.text                       0x24b0                0x18            0x24  (36)
 
-                 Total "program" memory used (bytes):         0x3408  (13320) 5%
+                 Total "program" memory used (bytes):         0x342c  (13356) 5%
 
 
 "data" Memory  [Origin = 0x1000, Length = 0x8000]
@@ -287,56 +290,56 @@ External Symbols in Program Memory (by address):
                   0x001d02                  _LP5012_SetColor_top_led
                   0x001d0e                  _LP5012_SetBrightness
                   0x001d16                  _LP5012_Set_DIMMER_LED_PER_UNITS
-                  0x001d24                  _RESET_GetCause
-                  0x001e30                  _RESET_CauseClearAll
-                  0x001e38                  _DHT10_Writer
-                  0x001ea0                  _DHT20_Sequential_Read
-                  0x001f22                  _DHT10_initization
-                  0x001f4a                  _TMR4_Initialize
-                  0x001f74                  _TMR4_Period32BitSet
-                  0x001f8a                  _TMR4_Period32BitGet
-                  0x001faa                  _TMR4_Counter32BitSet
-                  0x001fc0                  _TMR4_Counter32BitGet
-                  0x001fee                  _TMR4_SetInterruptHandler
-                  0x001ffe                  _TMR4_Start
-                  0x00200e                  _TMR4_Stop
-                  0x002018                  _TMR4_GetElapsedThenClear
-                  0x002030                  _TMR4_SoftwareCounterGet
-                  0x00203c                  _TMR4_SoftwareCounterClear
-                  0x002048                  _TMR2_Initialize
-                  0x00206c                  _TMR2_Period16BitSet
-                  0x00207e                  _TMR2_Period16BitGet
-                  0x002086                  _TMR2_Counter16BitSet
-                  0x002098                  _TMR2_Counter16BitGet
-                  0x0020be                  _TMR2_SetInterruptHandler
-                  0x0020ce                  _TMR2_Start
-                  0x0020de                  _TMR2_Stop
-                  0x0020e8                  _TMR2_GetElapsedThenClear
-                  0x002100                  _TMR2_SoftwareCounterGet
-                  0x00210c                  _TMR2_SoftwareCounterClear
-                  0x002118                  _PIN_MANAGER_Initialize
-                  0x0021de                  _main
-                  0x002202                  _Delaytime_ms
-                  0x002228                  _initial_program_config
-                  0x002234                  _ClearStatus_led
-                  0x00232a                  _INTERRUPT_Initialize
-                  0x0023b2                  _CLOCK_Initialize
-                  0x002400                  _ADC1_Initialize
-                  0x002424                  _ADC1_SetInterruptHandler
-                  0x00245e                  _SYSTEM_Initialize
-                  0x00247c                  ___delay32
+                  0x001d24                  _DHT10_Writer
+                  0x001d8c                  _DHT20_Sequential_Read
+                  0x001df6                  _DHT10_initization
+                  0x001e4e                  _RESET_GetCause
+                  0x001f5a                  _RESET_CauseClearAll
+                  0x001f62                  _TMR4_Initialize
+                  0x001f8c                  _TMR4_Period32BitSet
+                  0x001fa2                  _TMR4_Period32BitGet
+                  0x001fc2                  _TMR4_Counter32BitSet
+                  0x001fd8                  _TMR4_Counter32BitGet
+                  0x002006                  _TMR4_SetInterruptHandler
+                  0x002016                  _TMR4_Start
+                  0x002026                  _TMR4_Stop
+                  0x002030                  _TMR4_GetElapsedThenClear
+                  0x002048                  _TMR4_SoftwareCounterGet
+                  0x002054                  _TMR4_SoftwareCounterClear
+                  0x002060                  _TMR2_Initialize
+                  0x002084                  _TMR2_Period16BitSet
+                  0x002096                  _TMR2_Period16BitGet
+                  0x00209e                  _TMR2_Counter16BitSet
+                  0x0020b0                  _TMR2_Counter16BitGet
+                  0x0020d6                  _TMR2_SetInterruptHandler
+                  0x0020e6                  _TMR2_Start
+                  0x0020f6                  _TMR2_Stop
+                  0x002100                  _TMR2_GetElapsedThenClear
+                  0x002118                  _TMR2_SoftwareCounterGet
+                  0x002124                  _TMR2_SoftwareCounterClear
+                  0x002130                  _PIN_MANAGER_Initialize
+                  0x0021f6                  _main
+                  0x00221a                  _Delaytime_ms
+                  0x002240                  _initial_program_config
+                  0x00224c                  _ClearStatus_led
+                  0x002342                  _INTERRUPT_Initialize
+                  0x0023ca                  _CLOCK_Initialize
+                  0x002418                  _ADC1_Initialize
+                  0x00243c                  _ADC1_SetInterruptHandler
+                  0x002476                  _SYSTEM_Initialize
+                  0x002494                  ___delay32
                   0x02affa                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x002400                  _ADC1_Initialize
-                  0x002424                  _ADC1_SetInterruptHandler
-                  0x0023b2                  _CLOCK_Initialize
-                  0x002234                  _ClearStatus_led
-                  0x001e38                  _DHT10_Writer
-                  0x001f22                  _DHT10_initization
-                  0x001ea0                  _DHT20_Sequential_Read
-                  0x002202                  _Delaytime_ms
+                  0x002418                  _ADC1_Initialize
+                  0x00243c                  _ADC1_SetInterruptHandler
+                  0x0023ca                  _CLOCK_Initialize
+                  0x00224c                  _ClearStatus_led
+                  0x001d24                  _DHT10_Writer
+                  0x001df6                  _DHT10_initization
+                  0x001d8c                  _DHT20_Sequential_Read
+                  0x00221a                  _Delaytime_ms
                   0x001ba0                  _EMC1001_Read
                   0x0014b4                  _HC595Init_PORT_1
                   0x0013be                  _HC595Init_PORT_2
@@ -366,7 +369,7 @@ External Symbols in Program Memory (by name):
                   0x00188a                  _I2C2_MasterTRBInsert
                   0x001826                  _I2C2_MasterWrite
                   0x001932                  _I2C2_MasterWriteTRBBuild
-                  0x00232a                  _INTERRUPT_Initialize
+                  0x002342                  _INTERRUPT_Initialize
                   0x001b5e                  _Intial_LP5012
                   0x00169e                  _LED_sum_valueStruct
                   0x001d0e                  _LP5012_SetBrightness
@@ -377,35 +380,35 @@ External Symbols in Program Memory (by name):
                   0x001d02                  _LP5012_SetColor_top_led
                   0x001d16                  _LP5012_Set_DIMMER_LED_PER_UNITS
                   0x001be2                  _MCHP24AA512_Read
-                  0x002118                  _PIN_MANAGER_Initialize
-                  0x001e30                  _RESET_CauseClearAll
-                  0x001d24                  _RESET_GetCause
+                  0x002130                  _PIN_MANAGER_Initialize
+                  0x001f5a                  _RESET_CauseClearAll
+                  0x001e4e                  _RESET_GetCause
                   0x0015ba                  _Refresh_Display
-                  0x00245e                  _SYSTEM_Initialize
+                  0x002476                  _SYSTEM_Initialize
                   0x00179a                  _Sevensegments_Clear
                   0x0017a0                  _Sevensegments_convert_float_to_display
-                  0x002098                  _TMR2_Counter16BitGet
-                  0x002086                  _TMR2_Counter16BitSet
-                  0x0020e8                  _TMR2_GetElapsedThenClear
-                  0x002048                  _TMR2_Initialize
-                  0x00207e                  _TMR2_Period16BitGet
-                  0x00206c                  _TMR2_Period16BitSet
-                  0x0020be                  _TMR2_SetInterruptHandler
-                  0x00210c                  _TMR2_SoftwareCounterClear
-                  0x002100                  _TMR2_SoftwareCounterGet
-                  0x0020ce                  _TMR2_Start
-                  0x0020de                  _TMR2_Stop
-                  0x001fc0                  _TMR4_Counter32BitGet
-                  0x001faa                  _TMR4_Counter32BitSet
-                  0x002018                  _TMR4_GetElapsedThenClear
-                  0x001f4a                  _TMR4_Initialize
-                  0x001f8a                  _TMR4_Period32BitGet
-                  0x001f74                  _TMR4_Period32BitSet
-                  0x001fee                  _TMR4_SetInterruptHandler
-                  0x00203c                  _TMR4_SoftwareCounterClear
-                  0x002030                  _TMR4_SoftwareCounterGet
-                  0x001ffe                  _TMR4_Start
-                  0x00200e                  _TMR4_Stop
+                  0x0020b0                  _TMR2_Counter16BitGet
+                  0x00209e                  _TMR2_Counter16BitSet
+                  0x002100                  _TMR2_GetElapsedThenClear
+                  0x002060                  _TMR2_Initialize
+                  0x002096                  _TMR2_Period16BitGet
+                  0x002084                  _TMR2_Period16BitSet
+                  0x0020d6                  _TMR2_SetInterruptHandler
+                  0x002124                  _TMR2_SoftwareCounterClear
+                  0x002118                  _TMR2_SoftwareCounterGet
+                  0x0020e6                  _TMR2_Start
+                  0x0020f6                  _TMR2_Stop
+                  0x001fd8                  _TMR4_Counter32BitGet
+                  0x001fc2                  _TMR4_Counter32BitSet
+                  0x002030                  _TMR4_GetElapsedThenClear
+                  0x001f62                  _TMR4_Initialize
+                  0x001fa2                  _TMR4_Period32BitGet
+                  0x001f8c                  _TMR4_Period32BitSet
+                  0x002006                  _TMR4_SetInterruptHandler
+                  0x002054                  _TMR4_SoftwareCounterClear
+                  0x002048                  _TMR4_SoftwareCounterGet
+                  0x002016                  _TMR4_Start
+                  0x002026                  _TMR4_Stop
                   0x001b64                  _TestRead
                   0x0010a4                  _UART1_Disable
                   0x00109a                  _UART1_Enable
@@ -464,7 +467,7 @@ External Symbols in Program Memory (by name):
                   0x0005b6                  __U2ErrInterrupt
                   0x00054a                  __U2RXInterrupt
                   0x0004e8                  __U2TXInterrupt
-                  0x00247c                  ___delay32
+                  0x002494                  ___delay32
                   0x000c38                  ___divdi3
                   0x000c98                  ___moddi3
                   0x000cf4                  ___muldi3
@@ -477,9 +480,9 @@ External Symbols in Program Memory (by name):
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
                   0x0015a8                  _delayloop
-                  0x002228                  _initial_program_config
+                  0x002240                  _initial_program_config
                   0x00174e                  _load_data_to_display
-                  0x0021de                  _main
+                  0x0021f6                  _main
                   0x000d8a                  _table_font_sevensegment
 
 Memory Configuration
@@ -522,6 +525,9 @@ LOAD build/default/production/74595.o
 LOAD build/default/production/Display_control.o
 LOAD build/default/production/LP5012_rgb_led.o
 LOAD build/default/production/DHT10.o
+LOAD build/default/production/Persenter.o
+LOAD build/default/production/Model.o
+LOAD build/default/production/View.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD p24EP256GP206
 LOAD c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libfx-elf.a
@@ -639,7 +645,7 @@ __FOSCSEL
 
 __FGS             0x02affa          0x2
  *(__FGS.sec*)
- __FGS.sec        0x02affa          0x2 /CW/_FGSð6ö
+ __FGS.sec        0x02affa          0x2 /CW/_FGS ë)
                   0x02affa                  __FGS.sec
 
 __FUID0
@@ -657,7 +663,7 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0xc562
+.debug_info       0x000000       0xc517
  *(.debug_info)
  .debug_info      0x000000       0x1090 build/default/production/mcc_generated_files/adc1.o
  .debug_info      0x001090        0x57c build/default/production/mcc_generated_files/traps.o
@@ -676,10 +682,10 @@ __FUID3
  .debug_info      0x00a51c        0xd75 build/default/production/74595.o
  .debug_info      0x00b291        0x6ba build/default/production/Display_control.o
  .debug_info      0x00b94b        0x6f1 build/default/production/LP5012_rgb_led.o
- .debug_info      0x00c03c        0x526 build/default/production/DHT10.o
+ .debug_info      0x00c03c        0x4db build/default/production/DHT10.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000       0x1716
+.debug_abbrev     0x000000       0x1705
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x111 build/default/production/mcc_generated_files/adc1.o
  .debug_abbrev    0x000111        0x10d build/default/production/mcc_generated_files/traps.o
@@ -699,9 +705,12 @@ __FUID3
  .debug_abbrev    0x0012f2         0xdd build/default/production/74595.o
  .debug_abbrev    0x0013cf         0xec build/default/production/Display_control.o
  .debug_abbrev    0x0014bb        0x148 build/default/production/LP5012_rgb_led.o
- .debug_abbrev    0x001603        0x113 build/default/production/DHT10.o
+ .debug_abbrev    0x001603         0xff build/default/production/DHT10.o
+ .debug_abbrev    0x001702          0x1 build/default/production/Persenter.o
+ .debug_abbrev    0x001703          0x1 build/default/production/Model.o
+ .debug_abbrev    0x001704          0x1 build/default/production/View.o
 
-.debug_line       0x000000       0x1a57
+.debug_line       0x000000       0x1aa6
  *(.debug_line)
  .debug_line      0x000000        0x136 build/default/production/mcc_generated_files/adc1.o
  .debug_line      0x000136        0x166 build/default/production/mcc_generated_files/traps.o
@@ -721,7 +730,10 @@ __FUID3
  .debug_line      0x0015ba        0x18e build/default/production/74595.o
  .debug_line      0x001748         0xf7 build/default/production/Display_control.o
  .debug_line      0x00183f        0x124 build/default/production/LP5012_rgb_led.o
- .debug_line      0x001963         0xf4 build/default/production/DHT10.o
+ .debug_line      0x001963         0xf5 build/default/production/DHT10.o
+ .debug_line      0x001a58         0x1a build/default/production/Persenter.o
+ .debug_line      0x001a72         0x1a build/default/production/Model.o
+ .debug_line      0x001a8c         0x1a build/default/production/View.o
 
 .debug_frame      0x000000       0x144c
  *(.debug_frame)
@@ -744,7 +756,7 @@ __FUID3
  .debug_frame     0x0012b8        0x132 build/default/production/LP5012_rgb_led.o
  .debug_frame     0x0013ea         0x62 build/default/production/DHT10.o
 
-.debug_str        0x000000        0x5a1
+.debug_str        0x000000        0x595
  *(.debug_str)
  .debug_str       0x000000         0x87 build/default/production/mcc_generated_files/adc1.o
  .debug_str       0x000087         0x24 build/default/production/mcc_generated_files/traps.o
@@ -763,7 +775,7 @@ __FUID3
  .debug_str       0x00048f         0x75 build/default/production/74595.o
  .debug_str       0x000504         0x54 build/default/production/Display_control.o
  .debug_str       0x000558          0x7 build/default/production/LP5012_rgb_led.o
- .debug_str       0x00055f         0x42 build/default/production/DHT10.o
+ .debug_str       0x00055f         0x36 build/default/production/DHT10.o
 
 .debug_loc
  *(.debug_loc)
@@ -1832,7 +1844,7 @@ LOAD c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-c-elf.a
 END GROUP
 OUTPUT(dist/default/production/air_purifier_V2.X.production.elf elf32-pic30)
-LOAD /CW/_FGSð6ö
+LOAD /CW/_FGS ë)
 LOAD jump_table
 LOAD default_isr
 LOAD data_init
@@ -1877,7 +1889,7 @@ LOAD data_init
                   0x000f58         0x43 build/default/production/DHT10.o
 
 __c30_signature
-                  0x000f9b         0x96
+                  0x000f9b         0xa8
  __c30_signature
                   0x000f9b          0x6 build/default/production/mcc_generated_files/adc1.o
  __c30_signature
@@ -1917,17 +1929,23 @@ __c30_signature
  __c30_signature
                   0x001007          0x6 build/default/production/DHT10.o
  __c30_signature
-                  0x00100d          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(crt0_extendedep.o)
+                  0x00100d          0x6 build/default/production/Persenter.o
  __c30_signature
-                  0x001013          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(data_init_extended.o)
+                  0x001013          0x6 build/default/production/Model.o
  __c30_signature
-                  0x001019          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(delay32ep.Leo)
+                  0x001019          0x6 build/default/production/View.o
  __c30_signature
-                  0x00101f          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(divmoddi3.epeo)
+                  0x00101f          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(crt0_extendedep.o)
  __c30_signature
-                  0x001025          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(muldi3.epeo)
+                  0x001025          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(data_init_extended.o)
  __c30_signature
-                  0x00102b          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(umuldi3.epeo)
+                  0x00102b          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(delay32ep.Leo)
+ __c30_signature
+                  0x001031          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(divmoddi3.epeo)
+ __c30_signature
+                  0x001037          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(muldi3.epeo)
+ __c30_signature
+                  0x00103d          0x6 c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a(umuldi3.epeo)
 
 .nbss               0x1000         0x58
  .nbss              0x1000         0x18 build/default/production/mcc_generated_files/i2c2.o
@@ -2078,13 +2096,13 @@ __c30_signature
  .config_JTAGEN
                   0x02aff0          0x2 build/default/production/mcc_generated_files/system.o
 
-_055aab4061e1443b
+_04df2b4061ecabeb
                     0x8d8a         0x14 load address 0x000d8a  
- _055aab4061e1443b
+ _04df2b4061ecabeb
                     0x8d8a         0x14 build/default/production/Display_control.o
                     0x8d8a                  _table_font_sevensegment
 
-.text             0x000d9e       0x14f6
+.text             0x000d9e       0x150e
  .text            0x000d9e        0x310 build/default/production/mcc_generated_files/uart1.o
                   0x000d9e                  _UART1_Initialize
                   0x000dd2                  _UART1_SetTxInterruptHandler
@@ -2179,68 +2197,68 @@ _055aab4061e1443b
                   0x001d02                  _LP5012_SetColor_top_led
                   0x001d0e                  _LP5012_SetBrightness
                   0x001d16                  _LP5012_Set_DIMMER_LED_PER_UNITS
- .text            0x001d24        0x114 build/default/production/mcc_generated_files/reset.o
-                  0x001d24                  _RESET_GetCause
-                  0x001d2c                  _RESET_CauseHandler
-                  0x001e30                  _RESET_CauseClearAll
- .text            0x001e38        0x112 build/default/production/DHT10.o
-                  0x001e38                  _DHT10_Writer
-                  0x001ea0                  _DHT20_Sequential_Read
-                  0x001f22                  _DHT10_initization
- .text            0x001f4a         0xfe build/default/production/mcc_generated_files/tmr4.o
-                  0x001f4a                  _TMR4_Initialize
-                  0x001f74                  _TMR4_Period32BitSet
-                  0x001f8a                  _TMR4_Period32BitGet
-                  0x001faa                  _TMR4_Counter32BitSet
-                  0x001fc0                  _TMR4_Counter32BitGet
-                  0x001fe8                  _TMR4_CallBack
-                  0x001fee                  _TMR4_SetInterruptHandler
-                  0x001ffe                  _TMR4_Start
-                  0x00200e                  _TMR4_Stop
-                  0x002018                  _TMR4_GetElapsedThenClear
-                  0x002030                  _TMR4_SoftwareCounterGet
-                  0x00203c                  _TMR4_SoftwareCounterClear
- .text            0x002048         0xd0 build/default/production/mcc_generated_files/tmr2.o
-                  0x002048                  _TMR2_Initialize
-                  0x00206c                  _TMR2_Period16BitSet
-                  0x00207e                  _TMR2_Period16BitGet
-                  0x002086                  _TMR2_Counter16BitSet
-                  0x002098                  _TMR2_Counter16BitGet
-                  0x0020a0                  _TMR2_CallBack
-                  0x0020be                  _TMR2_SetInterruptHandler
-                  0x0020ce                  _TMR2_Start
-                  0x0020de                  _TMR2_Stop
-                  0x0020e8                  _TMR2_GetElapsedThenClear
-                  0x002100                  _TMR2_SoftwareCounterGet
-                  0x00210c                  _TMR2_SoftwareCounterClear
- .text            0x002118         0xc6 build/default/production/mcc_generated_files/pin_manager.o
-                  0x002118                  _PIN_MANAGER_Initialize
- .text            0x0021de         0xb6 build/default/production/main.o
-                  0x0021de                  _main
-                  0x002202                  _Delaytime_ms
-                  0x002228                  _initial_program_config
-                  0x002234                  _ClearStatus_led
+ .text            0x001d24        0x12a build/default/production/DHT10.o
+                  0x001d24                  _DHT10_Writer
+                  0x001d8c                  _DHT20_Sequential_Read
+                  0x001df6                  _DHT10_initization
+ .text            0x001e4e        0x114 build/default/production/mcc_generated_files/reset.o
+                  0x001e4e                  _RESET_GetCause
+                  0x001e56                  _RESET_CauseHandler
+                  0x001f5a                  _RESET_CauseClearAll
+ .text            0x001f62         0xfe build/default/production/mcc_generated_files/tmr4.o
+                  0x001f62                  _TMR4_Initialize
+                  0x001f8c                  _TMR4_Period32BitSet
+                  0x001fa2                  _TMR4_Period32BitGet
+                  0x001fc2                  _TMR4_Counter32BitSet
+                  0x001fd8                  _TMR4_Counter32BitGet
+                  0x002000                  _TMR4_CallBack
+                  0x002006                  _TMR4_SetInterruptHandler
+                  0x002016                  _TMR4_Start
+                  0x002026                  _TMR4_Stop
+                  0x002030                  _TMR4_GetElapsedThenClear
+                  0x002048                  _TMR4_SoftwareCounterGet
+                  0x002054                  _TMR4_SoftwareCounterClear
+ .text            0x002060         0xd0 build/default/production/mcc_generated_files/tmr2.o
+                  0x002060                  _TMR2_Initialize
+                  0x002084                  _TMR2_Period16BitSet
+                  0x002096                  _TMR2_Period16BitGet
+                  0x00209e                  _TMR2_Counter16BitSet
+                  0x0020b0                  _TMR2_Counter16BitGet
+                  0x0020b8                  _TMR2_CallBack
+                  0x0020d6                  _TMR2_SetInterruptHandler
+                  0x0020e6                  _TMR2_Start
+                  0x0020f6                  _TMR2_Stop
+                  0x002100                  _TMR2_GetElapsedThenClear
+                  0x002118                  _TMR2_SoftwareCounterGet
+                  0x002124                  _TMR2_SoftwareCounterClear
+ .text            0x002130         0xc6 build/default/production/mcc_generated_files/pin_manager.o
+                  0x002130                  _PIN_MANAGER_Initialize
+ .text            0x0021f6         0xb6 build/default/production/main.o
+                  0x0021f6                  _main
+                  0x00221a                  _Delaytime_ms
+                  0x002240                  _initial_program_config
+                  0x00224c                  _ClearStatus_led
 
-.dinit            0x002294         0x96
- .dinit           0x002294         0x96 data_init
+.dinit            0x0022ac         0x96
+ .dinit           0x0022ac         0x96 data_init
 
-.text             0x00232a        0x152
- .text            0x00232a         0x88 build/default/production/mcc_generated_files/interrupt_manager.o
-                  0x00232a                  _INTERRUPT_Initialize
- .text            0x0023b2         0x4e build/default/production/mcc_generated_files/clock.o
-                  0x0023b2                  _CLOCK_Initialize
- .text            0x002400         0x4c build/default/production/mcc_generated_files/adc1.o
-                  0x002400                  _ADC1_Initialize
-                  0x00241e                  _ADC1_CallBack
-                  0x002424                  _ADC1_SetInterruptHandler
-                  0x002430                  _ADC1_Tasks
- .text            0x00244c         0x30 build/default/production/mcc_generated_files/system.o
-                  0x00245e                  _SYSTEM_Initialize
+.text             0x002342        0x152
+ .text            0x002342         0x88 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x002342                  _INTERRUPT_Initialize
+ .text            0x0023ca         0x4e build/default/production/mcc_generated_files/clock.o
+                  0x0023ca                  _CLOCK_Initialize
+ .text            0x002418         0x4c build/default/production/mcc_generated_files/adc1.o
+                  0x002418                  _ADC1_Initialize
+                  0x002436                  _ADC1_CallBack
+                  0x00243c                  _ADC1_SetInterruptHandler
+                  0x002448                  _ADC1_Tasks
+ .text            0x002464         0x30 build/default/production/mcc_generated_files/system.o
+                  0x002476                  _SYSTEM_Initialize
 
-.init.delay32     0x00247c         0x1c
- .init.delay32    0x00247c         0x1c c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(delay32ep.Leo)
-                  0x00247c                  ___delay32
+.init.delay32     0x002494         0x1c
+ .init.delay32    0x002494         0x1c c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\liblega-pic30-elf.a(delay32ep.Leo)
+                  0x002494                  ___delay32
 
-.text             0x002498         0x18
- .text            0x002498         0x18 build/default/production/mcc_generated_files/traps.o
-                  0x002498                  _TRAPS_halt_on_error
+.text             0x0024b0         0x18
+ .text            0x0024b0         0x18 build/default/production/mcc_generated_files/traps.o
+                  0x0024b0                  _TRAPS_halt_on_error
